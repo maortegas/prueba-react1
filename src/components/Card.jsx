@@ -1,4 +1,3 @@
-import React, { forwardRef } from 'react'
 import './Card.css'
 import TextTruncate from 'react-text-truncate'
 

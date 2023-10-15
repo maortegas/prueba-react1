@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import MiApi from './components/MiApi'
 import Buscador from './components/Buscador'
-import Listador from './components/Listador';
 
 function App() {
 const [movies, setMovies] = useState([])

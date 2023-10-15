@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Card from './Card';
 
