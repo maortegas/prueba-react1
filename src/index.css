@@ -3,7 +3,8 @@
     padding: 0;
 }
 body{
-    font-family: 'Roboto', sans-serif;
+   
+    background-color: #686967;
 }
 
 .grid_area{
@@ -13,17 +14,17 @@ body{
     "gnavbar gnavbar"
     "ggrid ggrid"
     "gfooter gfooter";
-    grid-template-rows: 0.3fr 5fr 0.5fr;
+    grid-template-rows: 0.1fr 5fr 0.3fr;
 }
 .navbar{
-    background-color:rgb(35, 33, 32);
+    background-color: #fff;
     grid-area: gnavbar;
-    color: white;
+    justify-content: flex-end;
 }
 
 
 .gridmain{
-    background-color:white;
+    background-color: #686967;
     grid-area: ggrid;
     margin: 10px;
     display: grid;
@@ -43,24 +44,6 @@ body{
     background-color:rgb(35, 33, 32);
     grid-area: gfooter;
     color: #fff;
-}
-
-.conteiner_menu{
-    height: 100px;
-    width: 90%;
-    display: flex;
-    flex-flow: column;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url("/assets/img/foto1.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-.conteiner_menu_texto{
-    padding-left: 20px;
 }
 
 
@@ -88,10 +71,9 @@ body{
 }
 .row-card{
     grid-gap: 50px;
+    justify-content: center;
 }
 
-@keyframes animateBorderOne {
-    to {
-        box-shadow: inset 2px -4px 0 5px #686967;
-    }
-  }  
+.colorDrop{
+    color: #fff;
+}

@@ -23,35 +23,35 @@ function Buscador({movies, setBuscador, setBuscadorFlag}) {
     const  ordenarAsc=(e)=>{
        const arreglo=[...movies];
        setBuscadorFlag(false)
-       arreglo.reverse();
+       arreglo.sort((a, b) => a.title.toLowerCase() < b.title.toLowerCase() ? 1 : -1);
        setBuscador(arreglo)
 
     }
     const  ordenarDesc=(e)=>{
         const arregloDesc=[...movies]; 
         setBuscadorFlag(false)
-        arregloDesc.sort();
+        arregloDesc.sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1);
         setBuscador(arregloDesc);
       
     }
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container >
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-              
-            navbarScroll
-          >
-
-            <NavDropdown title="Ordernar por" id="navbarScrollingDropdown" >
+    <Navbar  expand="lg" className="bg-body-tertiary">
+      <Container fluid >
+        <Navbar.Toggle aria-controls="navbarScroll"  />
+        <Navbar.Collapse id="navbarScroll" >
+            <Nav
+                className="me-auto my-2 my-lg-0 text-body"
+                style={{ maxHeight: '100px' }}
+                navbarScroll
+              >
+            
+            <NavDropdown  variant="secondary" title="Ordernar por" id="navbarScrollingDropdown" className='colorDrop'>
               <NavDropdown.Item eventKey='Descendente'  onClick={(e) => ordenarDesc()} >Descendente A-Z</NavDropdown.Item>
               <NavDropdown.Item eventKey='Ascendente'  onClick={(e) => ordenarAsc()} > Ascendente Z-A</NavDropdown.Item>
             </NavDropdown>
-       </Nav>
-          <Form className="d-flex">
+           </Nav>
+          <Form className="d-flex justify-content-start  ">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -65,6 +65,8 @@ function Buscador({movies, setBuscador, setBuscadorFlag}) {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
+    
   );
 }
 

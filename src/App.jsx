@@ -13,18 +13,14 @@ const [buscadorFlag, setBuscadorFlag]=useState(true);
     <>
     <div className="grid_area">
       <div className="navbar"> 
-        <nav>
         <Buscador movies={movies} setBuscador={setBuscador} setBuscadorFlag={setBuscadorFlag}  />
-        </nav>
       </div>
       <section className="gridmain">
         <MiApi movies={buscadorFlag ? movies:buscador} setMovies={setMovies} />
-       
       </section>
-
-        <div className="footer">
-            <p>Todos los derechos reservados PlayShop@2023</p>
-        </div>
+      <div className="footer">
+        <p>Todos los derechos reservados @2023</p>
+      </div>
     </div>
     </>
   )
